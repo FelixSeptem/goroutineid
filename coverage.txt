@@ -1,0 +1,7 @@
+mode: atomic
+github.com/FelixSeptem/goroutineid/goroutineid.go:12.26,15.3 2 8
+github.com/FelixSeptem/goroutineid/goroutineid.go:18.30,25.13 7 3000
+github.com/FelixSeptem/goroutineid/goroutineid.go:28.2,30.16 3 3000
+github.com/FelixSeptem/goroutineid/goroutineid.go:33.2,33.12 1 3000
+github.com/FelixSeptem/goroutineid/goroutineid.go:25.13,26.48 1 0
+github.com/FelixSeptem/goroutineid/goroutineid.go:30.16,31.75 1 0

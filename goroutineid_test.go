@@ -13,7 +13,7 @@ func TestGetGoroutineID(t *testing.T) {
 		ch  = make(chan uint64)
 		wg  = sync.WaitGroup{}
 	)
-	for i := 0; i < 10000; i++ {
+	for i := 0; i < 3000; i++ {
 		wg.Add(1)
 		go func(ch chan<- uint64) {
 			ch <- GetGoroutineID()
@@ -21,13 +21,13 @@ func TestGetGoroutineID(t *testing.T) {
 		}(ch)
 	}
 	go func() {
-		for i := 0; i < 10000; i++ {
+		for i := 0; i < 3000; i++ {
 			i := <-ch
 			gID[i] = struct{}{}
 		}
 	}()
 	wg.Wait()
-	assert.Equal(t, 10000, len(gID))
+	assert.Equal(t, 3000, len(gID))
 }
 
 func BenchmarkGetGoroutineID(b *testing.B) {
